@@ -21,12 +21,9 @@ client.on('ready', () => {
     });
 
     client.on('guildMemberAdd', member =>{
-const args = message.content.slice(prefix.length).split(/ +/);
 const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
 
-switch(args[0]){
-case 'embed' :
 const embed = new Discord.RichEmbed()
 .setTitle('Hello!')
 .addField(`Welcome ${member} to BeST AuToFArM ;}`)
@@ -34,7 +31,6 @@ const embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 break;
 
-}
 });
 
 client.on('message' ,message => {
