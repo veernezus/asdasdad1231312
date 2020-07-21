@@ -10,8 +10,14 @@ console.log('VBot Is online.')
 
 
 client.on('ready', () => {
-    client.user.setActivity('Veernezus Scripting', { type : "WATCHING"});
-    client.user.setStatus('dnd')
+    bot.user.setPresence({
+        status: 'dnd',
+        activity: {
+            name: 'Veernezus Scripting',
+            type: 'WATCHING',
+        }
+    })
+    
     });
 
 client.on('message' ,message => {
