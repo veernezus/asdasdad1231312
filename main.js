@@ -11,7 +11,7 @@ console.log('VBot Is online.')
 
 client.on('ready', () => {
     client.user.setActivity('Veernezus Scripting', { type : "WATCHING"});
-    bot.user.setStatus('dnd')
+    client.user.setStatus('dnd')
     });
 
 client.on('message' ,message => {
