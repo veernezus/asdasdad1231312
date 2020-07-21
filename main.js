@@ -24,7 +24,7 @@ client.on('ready', () => {
 const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
 
-const embed = new Discord.RichEmbed()
+const embed = new Discord.MessageEmbed()
 .setTitle('Hello!')
 .addField(`Welcome ${member} to BeST AuToFArM ;}`)
 .setColor(0x426cf5)
