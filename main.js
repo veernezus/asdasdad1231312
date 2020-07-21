@@ -20,6 +20,15 @@ client.on('ready', () => {
     
     });
 
+    client.on('guildMemberAdd', member =>{
+
+const channel = member.guild.channels.find(channel => channel.name === "👋welcome👋");
+if(!channel) return;
+
+channel.send(`Welcome ${member} to ${server}😎`)
+
+});
+
 client.on('message' ,message => {
 if(!message.content.startsWith(prefix)|| message.author.bot ) return;
 
