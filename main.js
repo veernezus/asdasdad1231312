@@ -10,7 +10,7 @@ console.log('VBot Is online.')
 
 
 client.on('ready', () => {
-    bot.user.setPresence({
+    client.user.setPresence({
         status: 'dnd',
         activity: {
             name: 'Veernezus Scripting',
