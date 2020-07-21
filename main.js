@@ -10,8 +10,8 @@ console.log('VBot Is online.')
 
 
 client.on('ready', () => {
-    client.user.setActivity('Veernezus Scripting', { type : "WATCHING"})
-    })
+    client.user.setActivity('Veernezus Scripting', { type : "WATCHING"});
+    });
 
 client.on('message' ,message => {
 if(!message.content.startsWith(prefix)|| message.author.bot ) return;
