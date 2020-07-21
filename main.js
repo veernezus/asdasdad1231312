@@ -21,12 +21,20 @@ client.on('ready', () => {
     });
 
     client.on('guildMemberAdd', member =>{
-
+const args = message.content.slice(prefix.length).split(/ +/);
 const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
 
-channel.send(`Welcome ${member} to BeST AuToFArM ;} `)
+switch(args[0]){
+case 'embed' :
+const embed = new Discord.RichEmbed()
+.setTitle('Hello!')
+.addField(`Welcome ${member} to BeST AuToFArM ;}`)
+.setColor(0x426cf5)
+message.channel.sendEmbed(embed);
 
+
+}
 });
 
 client.on('message' ,message => {
