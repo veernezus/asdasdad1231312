@@ -29,7 +29,6 @@ const embed = new Discord.RichEmbed()
 .addField(`Welcome ${member} to BeST AuToFArM ;}`)
 .setColor(0x426cf5)
 message.channel.sendEmbed(embed);
-break;
 
 });
 
