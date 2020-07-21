@@ -25,7 +25,7 @@ client.on('ready', () => {
 const channel = member.guild.channels.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
 
-channel.send(`Welcome ${member} to ${server}😎`)
+channel.send(`Welcome ${member} to BeST AuToFArM ;} `)
 
 });
 
