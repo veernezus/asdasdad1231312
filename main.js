@@ -23,7 +23,7 @@ client.on('ready', () => {
 const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
 channel.send(`${member}
-\`\`\`\yaml Welcome to BeST AuToFArM ;} !\`\`\``);
+\`\`\`\Welcome to BeST AuToFArM ;} !\`\`\``);
 
 });
 
