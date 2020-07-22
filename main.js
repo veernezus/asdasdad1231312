@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-
 const client = new Discord.Client();
 
 const prefix = ';'; 
@@ -24,7 +23,7 @@ client.on('ready', () => {
 const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
 channel.send(`${member}
-\`\`\`\Welcome to BeST AuToFArM ;} !\`\`\``);
+\`\`\`\yamlWelcome to BeST AuToFArM ;} !\`\`\``);
 
 });
 
