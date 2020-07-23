@@ -10,5 +10,5 @@ message.channel.send(botmessage)
 }
 
 module.exports.help = {
-    name: say
+    name: "say"
 }
