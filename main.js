@@ -37,7 +37,7 @@ if (command === 'ping'){
 }
 
 else if (command == 'say') {
-//if(!message.member.hasPermission("MANAGE_MESSAGES")) return; 
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return; 
 let botmessage = args.join(" ");
 
 message.delete().catch();
