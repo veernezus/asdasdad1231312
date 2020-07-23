@@ -36,11 +36,11 @@ if (command === 'ping'){
     message.channel.send('pong');
 }
 else if (command == 'say') {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("no");
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.delete().catch(); message.reply("no"); message.delete().catch();
 let botmessage = args.join(" ");
 
 message.delete().catch();
-message.channel.send(botmessage)
+message.channel.send(botmessage);
 }
 
 });
