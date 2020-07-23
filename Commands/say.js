@@ -1,8 +1,8 @@
 
 
 module.exports = {
-    name : 'say',
-    description : 'say command',
+    name: 'say',
+    description: 'say command',
     execute(message,args){
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("no");
     let botmessage = args.join(" ");
