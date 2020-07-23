@@ -35,12 +35,15 @@ const command = args.shift().toLowerCase();
 if (command === 'ping'){
     message.channel.send('pong');
 }
+
 else if (command == 'say') {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.delete({ timeout: 3000 }).catch(); message.reply("U Have No Permissions,Rip"); message.delete({ timeout: 3000 }).catch();
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
 let botmessage = args.join(" ");
 
 message.delete().catch();
 message.channel.send(botmessage);
+} else  { 
+    message.reply("U Have No Permissions,Rip");  message.delete({ timeout: 3000 }); 
 }
 
 });
