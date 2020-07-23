@@ -37,13 +37,11 @@ if (command === 'ping'){
 }
 
 else if (command == 'say') {
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return; 
+if(!message.member.hasPermission("MANAGE_MESSAGES")); return message.reply('You Do Not Have Permissions, Rip',{time : 3000}); 
 let botmessage = args.join(" ");
 
 message.delete().catch();
 message.channel.send(botmessage); 
-} else {
-message.reply('You Do Not Have Permissions, Rip',{time : 3000}); 
 }
 
 });
