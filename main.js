@@ -36,7 +36,7 @@ if (command === 'ping'){
     message.channel.send('pong');
 }
 else if (command == 'say') {
-client.Commands.get('say').execute(message,args);
+client.commands.get('say').execute(message,args);
 }
 
 });
