@@ -43,7 +43,7 @@ let botmessage = args.join(" ");
 message.delete().catch();
 message.channel.send(botmessage);
 } else  { 
-    message.reply("U Have No Permissions,Rip");  message.delete({ timeout: 3000 }); 
+    message.channel.reply("U Have No Permissions,Rip");   message.channel.delete({ timeout: 3000 }); 
 }
 
 });
