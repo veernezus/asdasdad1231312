@@ -35,7 +35,9 @@ const command = args.shift().toLowerCase();
 if (command === 'ping'){
     message.channel.send('pong');
 }
-
+else if (command == 'say') {
+client.commands.get('say').execute(message.args)
+}
 
 });
 
