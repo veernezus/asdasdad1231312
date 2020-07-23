@@ -41,9 +41,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return;
 let botmessage = args.join(" ");
 
 message.delete().catch();
-message.channel.send(botmessage);
-} else  { 
-    message.channel.reply("U Have No Permissions,Rip");   message.channel.delete({ timeout: 3000 }); 
+message.channel.send(botmessage); 
 }
 
 });
