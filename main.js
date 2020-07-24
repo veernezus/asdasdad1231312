@@ -37,7 +37,7 @@ if (command === 'ping'){
 }
 
 else if (command == 'say') {
-if (!message.member.roles.cache.find(r => r.name === "Staff")) return message.reply('You Do Not Have Permissions, Rip').then((message) => {setTimeout(function(){message.delete()},5000) }) 
+if (!message.member.roles.cache.find(r => r.name === "Staff")) return message.reply('You Do Not Have Permissions, Rip').then((message) => {setTimeout(function(){message.delete()},5000) }); 
 let botmessage = args.join(" ");
 
 message.delete();
