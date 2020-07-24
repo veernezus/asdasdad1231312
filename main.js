@@ -28,11 +28,6 @@ channel.send(`Welcome ${member} To ${member.guild.name} !`);
 
 client.on('message' ,message => {
 if(!message.content.startsWith(prefix)|| message.author.bot ) return;
-if(usedCommand.has(message.author.id)){
-    message.reply('Too Fast.').then((message) => {setTimeout(function(){message.delete()},5000) });
-
-} else {
-
 
 const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
@@ -49,7 +44,7 @@ message.delete();
 message.channel.send(botmessage); 
 };
 
-}});
+});
 
 
 
