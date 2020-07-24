@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+const usedCommand = new Set();
 const prefix = ';'; 
 
 client.once('ready', () => {
@@ -28,6 +28,11 @@ channel.send(`Welcome ${member} To ${member.guild.name} !`);
 
 client.on('message' ,message => {
 if(!message.content.startsWith(prefix)|| message.author.bot ) return;
+if(usedCommand.has(message.author.id)){
+    message.reply('Too Fast.').then((message) => {setTimeout(function(){message.delete()},5000) });
+
+} else {
+
 
 const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
@@ -37,14 +42,14 @@ if (command === 'ping'){
 }
 
 else if (command == 'say') {
-if(!message.member.roles.cache.find(r => r.name === "Staff")) return message.reply('You Do Not Have Permissions, Rip').then((message) => {setTimeout(function(){message.delete()},5000) }); 
+if (!message.member.roles.cache.find(r => r.name === "Staff")) return message.reply('You Do Not Have Permissions, Rip').then((message) => {setTimeout(function(){message.delete()},5000) }) 
 let botmessage = args.join(" ");
 
 message.delete();
 message.channel.send(botmessage); 
-}
+};
 
-});
+}});
 
 
 
