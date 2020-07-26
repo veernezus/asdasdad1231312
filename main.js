@@ -12,7 +12,7 @@ client.on('ready', () => {
     client.user.setPresence({
         status: 'dnd',
         activity: {
-            name: 'Veernezus Scripting',
+            name: 'This Server',
             type: 'WATCHING',
         }
     })
