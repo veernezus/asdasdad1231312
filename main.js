@@ -27,7 +27,7 @@ const embed = new Discord.MessageEmbed()
 .setTitle('New Member')
 .setDescription(`Welcome ${member} to ${member.guild.name} !`)
 .setColor('#00FF00');    
-member.guild.channels.get(channel).send({embed});
+member.guild.channels.cache.get(channel).send({embed});
 });
 
 client.on('message' ,message => {
