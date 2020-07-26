@@ -19,7 +19,7 @@ client.on('ready', () => {
     
     });
 
-    client.on('guildMemberAdd', member , message =>{
+    client.on('guildMemberAdd' , message =>{
 const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
 const embed = new Discord.MessageEmbed()
