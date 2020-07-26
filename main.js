@@ -28,7 +28,7 @@ if(!channel) return;
 .setDescription(`Welcome ${member} to ${member.guild.name} !`)
 .setColor('#00FF00')
 }
-member.guild.channels.cache.get(channel).send({embed});
+member.guild.channels.cache.get('718849959574896801').send({embed});
 });
 
 client.on('message' ,message => {
