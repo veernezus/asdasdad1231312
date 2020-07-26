@@ -28,7 +28,7 @@ const embed = new Discord.MessageEmbed()
 .setDescription(`Welcome to ${member.guild.name} !`)
 .setColor('#00FF00')
 member.guild.channels.cache.get('718849959574896801').send(embed);
-member.guild.channels.cache.get('718849959574896801'.send(`${member}`)
+member.guild.channels.cache.get('718849959574896801').send(`${member}`);
 });
 
 client.on('message' ,message => {
