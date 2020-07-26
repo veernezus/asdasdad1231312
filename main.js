@@ -22,11 +22,12 @@ client.on('ready', () => {
     client.on('guildMemberAdd', (member)  =>{
 let channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome👋");
 if(!channel) return;
-const embed = new Discord.MessageEmbed()
+{const embed = new Discord.MessageEmbed()
 
 .setTitle('New Member')
 .setDescription(`Welcome ${member} to ${member.guild.name} !`)
 .setColor('#00FF00')
+}
 member.guild.channels.cache.get(channel).send({embed});
 });
 
