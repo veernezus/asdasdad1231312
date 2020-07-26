@@ -24,9 +24,9 @@ const channel = member.guild.channels.cache.find(channel => channel.name === "ðŸ
 if(!channel) return;
 const embed = new Discord.MessageEmbed()
 
-.Title('New Member')
-.Description(`Welcome ${member} to ${member.guild.name} !`)
-.Color('#00FF00');    
+.setTitle('New Member')
+.setDescription(`Welcome ${member} to ${member.guild.name} !`)
+.setColor('#00FF00');    
 message.channel.send(embed)
 });
 
