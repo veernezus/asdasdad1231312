@@ -39,11 +39,7 @@ if(!message.member.roles.cache.find(r => r.name === "VBot Perms")) return messag
 const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
 
-if (command === 'ping'){
-    message.channel.send('pong');
-}
-
-else if (command == 'say') {
+if (command === 'say') {
 
 let botmessage = args.join(" ");
 
@@ -52,7 +48,11 @@ message.channel.send(botmessage);
 
 });
 
-
-
+client.on('message' ,message => {
+if(!message.content.startsWith(prefix)|| message.author.bot ) return
+if (command === 'ping'){
+    message.channel.send('pong');
+}
+});
 
 client.login(process.env.token);
