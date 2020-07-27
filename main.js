@@ -33,8 +33,8 @@ member.guild.channels.cache.get('718849959574896801').send(`${member}`);
 
 client.on('message' ,message => {
 if(!message.content.startsWith(prefix)|| message.author.bot ) return;
-if (!message.member.roles.cache.find(r => r.name === "VBot Perms")) return message.delete()
-message.reply('You Do Not Have Permissions, Rip').then((message) => {setTimeout(function(){message.delete()},5000) }); 
+message.delete();
+if(!message.member.roles.cache.find(r => r.name === "VBot Perms")) return message.reply('You Do Not Have Permissions, Rip').then((message) => {setTimeout(function(){message.delete()},5000) }); 
 
 const args = message.content.slice(prefix.length).split(/ +/);
 const command = args.shift().toLowerCase();
@@ -47,7 +47,6 @@ else if (command == 'say') {
 
 let botmessage = args.join(" ");
 
-message.delete();
 message.channel.send(botmessage); 
 };
 
